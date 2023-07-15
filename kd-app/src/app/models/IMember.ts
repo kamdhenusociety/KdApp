@@ -11,6 +11,7 @@ export interface IMember
     info?:string;
     tenureStartDate:string;
     tenureEndDate:string;
+    imgSource?:string;
 }
 export enum Gender{
     MALE = 0,

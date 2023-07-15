@@ -1,14 +1,14 @@
 import { Container, Grid, Header, List } from "semantic-ui-react";
-import LayoutList from "./LayoutList";
+import FlatLayoutList from "./FlatLayoutList";
 
-const LayoutDashboard = () => {
+const FlatLayoutDashboard = () => {
   return (
     <Container>
       <Header as="h1">Flats Layout Plan</Header>
       <Grid>
         <Grid.Column width="16">
           <List>
-            <LayoutList />
+            <FlatLayoutList />
           </List>
         </Grid.Column>
       </Grid>
@@ -16,4 +16,4 @@ const LayoutDashboard = () => {
   );
 };
 
-export default LayoutDashboard;
+export default FlatLayoutDashboard;

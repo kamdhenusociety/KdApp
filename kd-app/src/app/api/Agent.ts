@@ -5,10 +5,10 @@ const sleep = (delay: number) => {
     return new Promise((resolve) => setTimeout(resolve, delay));
 }
 
-axios.defaults.baseURL='https://localhost:5001/api';
+axios.defaults.baseURL=import.meta.env.VITE_APP_API_URL;
 axios.interceptors.response.use(async r => {
    try {
-        await sleep(1000);
+        if(APP_ENV==='development') await sleep(1000);
         return r;
     } catch (error) {
         console.log(error);

@@ -2,8 +2,7 @@ import {
   Container,
   Menu,
   Image,
-  Header,
-  Grid,
+  Header
 } from "semantic-ui-react";
 import { NavLink } from "react-router-dom";
 
@@ -19,7 +18,7 @@ const NavBar = () => {
                     src="/kd.svg"
                     style={{ marginRight: "10px" }}
                   />
-            The Kamdhenu Co-Operative Group Housing Society Ltd.
+            {import.meta.env.VITE_APP_HEADER}
             {/* <Grid>
               <Grid.Column width="2">
                 <Header as="h2">
@@ -38,6 +37,9 @@ const NavBar = () => {
             </Grid> */}
 
             </Header>
+          </Menu.Item>
+          <Menu.Item>
+            {APP_ENV ==='development'? APP_ENV : ''} 
           </Menu.Item>
           {/* <Menu.Item
           as={NavLink}
@@ -65,8 +67,8 @@ const NavBar = () => {
         <Menu.Item name="home" as={NavLink} to="/" />
         <Menu.Item name="members" as={NavLink} to="/members" />
         <Menu.Item name="amenities" as={NavLink} to="/amenities" />
-        {/* <Menu.Item name="activities" as={NavLink} to="/activities" /> */}
         <Menu.Item name="flat layout plan" as={NavLink} to="/layout" />
+        <Menu.Item name="activities" as={NavLink} to="/activities" />
         {/* <Menu.Menu position="right">
           <Menu.Item name="logout" />
         </Menu.Menu> */}
